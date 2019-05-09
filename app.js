@@ -5,7 +5,24 @@ import {MDCSelect} from '@material/select';
 import {MDCChipSet} from '@material/chips';
 import states from './states.json';
 
-const topAppBar = new MDCTopAppBar(document.querySelector('.mdc-top-app-bar'));
+import {MDCDrawer} from '@material/drawer';
+
+
+
+
+
+
+
+const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+
+const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+topAppBar.setScrollTarget(document.getElementById('main-content'));
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
+
+
 const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
 tabBar.listen('MDCTabBar:activated', (activatedEvent) => {
