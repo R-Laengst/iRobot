@@ -34,14 +34,14 @@ body {
   margin: 0;
 }
 
-.adopt-a-pup-top-navigation {
+.irobot-top-navigation {
   display: flex;
   position: relative;
   box-sizing: border-box;
   width: 100%;
 }
 
-.adopt-a-pup-tab {
+.irobot-tab {
   @include mdc-tab-text-label-color(white);
   @include mdc-tab-icon-color(white);
 
@@ -50,25 +50,25 @@ body {
   }
 }
 
-.adopt-a-pup-tab-indicator {
+.irobot-tab-indicator {
   @include mdc-tab-indicator-underline-color(white);
 }
 
-.adopt-a-pup-puppers {
+.irobot-puppers {
   max-width: 1480px;
 }
 
-.adopt-a-pup-body--hidden {
+.irobot-body--hidden {
   display: none;
 }
 
 $card-text-label-baseline: 16px;
 
-.adopt-a-pup-card .mdc-card__actions {
+.irobot-card .mdc-card__actions {
   margin-top: auto;
 }
 
-.adopt-a-pup-card__text-label {
+.irobot-card__text-label {
   margin: 0 16px;
   @include mdc-typography(headline6);
   @include mdc-typography-baseline-top(32px);
@@ -77,14 +77,14 @@ $card-text-label-baseline: 16px;
 
 $card-secondary-baseline: 16px;
 
-.adopt-a-pup-card__secondary {
+.irobot-card__secondary {
   margin: 0 16px;
   @include mdc-typography(body2);
   @include mdc-typography-baseline-top(24px);
   @include mdc-typography-baseline-bottom(-$card-secondary-baseline);
 }
 
-.adopt-a-pup--fixed-adjust {
+.irobot--fixed-adjust {
   padding-top: 112px;
 }
 
