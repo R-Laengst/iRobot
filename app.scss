@@ -30,8 +30,11 @@ $mdc-shape-small-component-radius: 16px;
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/typography/mixins";
 
+@import "@material/drawer/mdc-drawer";
+
 body {
   margin: 0;
+  display: flex;
 }
 
 .irobot-top-navigation {
@@ -129,4 +132,21 @@ $card-secondary-baseline: 16px;
   @include mdc-typography(caption);
   @include mdc-typography-baseline-top(24px);
   @include mdc-typography-baseline-bottom(-$card-text-label-baseline);
+}
+
+
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+.mdc-top-app-bar {
+  position: absolute;
 }
