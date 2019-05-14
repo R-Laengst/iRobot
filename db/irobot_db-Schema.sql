@@ -23,7 +23,7 @@ USE `irobot_db` ;
 DROP TABLE IF EXISTS `irobot_db`.`Anschrift` ;
 
 CREATE TABLE IF NOT EXISTS `irobot_db`.`Anschrift` (
-  `idAnschrift` INT NOT NULL,
+  `idAnschrift` INT NOT NULL AUTO_INCREMENT,
   `Straße` VARCHAR(45) NULL,
   `Nr` INT NULL,
   `PLZ` INT NULL,
@@ -38,7 +38,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `irobot_db`.`Benutzer` ;
 
 CREATE TABLE IF NOT EXISTS `irobot_db`.`Benutzer` (
-  `idBenutzer` INT NOT NULL,
+  `idBenutzer` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(45) NULL,
   `Vorname` VARCHAR(45) NULL,
   `Passwort` VARCHAR(45) NULL,
@@ -58,7 +58,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `irobot_db`.`Bestellung` ;
 
 CREATE TABLE IF NOT EXISTS `irobot_db`.`Bestellung` (
-  `idBestellung` INT NOT NULL,
+  `idBestellung` INT NOT NULL AUTO_INCREMENT,
   `Datum` VARCHAR(45) NULL,
   `Benutzer_idBenutzer` INT NOT NULL,
   `Benutzer_Anschrift_idAnschrift` INT NOT NULL,
@@ -77,7 +77,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `irobot_db`.`Artikel` ;
 
 CREATE TABLE IF NOT EXISTS `irobot_db`.`Artikel` (
-  `idArtikel` INT NOT NULL,
+  `idArtikel` INT NOT NULL AUTO_INCREMENT,
   `Name` VARCHAR(45) NULL,
   `Beschreibung` VARCHAR(255) NULL,
   `Kategorie` VARCHAR(45) NULL,
@@ -94,7 +94,6 @@ CREATE TABLE IF NOT EXISTS `irobot_db`.`Bestellposition` (
   `Anzahl` INT NOT NULL,
   `Bestellung_idBestellung` INT NOT NULL,
   `Artikel_idArtikel` INT NOT NULL,
-  PRIMARY KEY (`Anzahl`),
   CONSTRAINT `fk_Bestellposition_Bestellung1`
     FOREIGN KEY (`Bestellung_idBestellung`)
     REFERENCES `irobot_db`.`Bestellung` (`idBestellung`)
@@ -114,7 +113,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `irobot_db`.`Variante` ;
 
 CREATE TABLE IF NOT EXISTS `irobot_db`.`Variante` (
-  `idVariante` INT NOT NULL,
+  `idVariante` INT NOT NULL AUTO_INCREMENT,
   `Farbe` VARCHAR(45) NULL,
   `Akkukapazität` INT NULL,
   `Preis` DECIMAL(20) NULL,
